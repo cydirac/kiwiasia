@@ -57,3 +57,8 @@
         
     }
     add_action('wp_enqueue_scripts','kiwiasia_child_scripts');
+    
+    function custom_excerpt_length( $length ) {
+    	return 999;
+    }
+    //add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

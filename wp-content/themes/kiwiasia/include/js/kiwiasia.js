@@ -10,7 +10,7 @@ function closeNav() {
 $(document).ready( function() {
     $('#myCarousel').carousel({
       
-        interval:   4000
+        interval:   8000
 	});
 	
 	var clickEvent = false;
