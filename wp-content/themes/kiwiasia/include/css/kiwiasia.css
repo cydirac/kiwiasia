@@ -3,13 +3,19 @@
 }
 @media (max-width: 400px) {
   header{
-    height: 420px;  
+    height: 250px;  
+  }
+  .header{
+    background: rgba(0, 0, 0, 0.4) url(http://media.istockphoto.com/photos/freedom-in-nature-picture-id614034904) repeat;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   header{
-    height: 500px;  
+    height: 400px;  
+  }
+  .header{
+    background: rgba(0, 0, 0, 0.4) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;
   }
 }
 header {
@@ -28,7 +34,6 @@ header {
   width: 100%;
   height: 100%; 
   min-height: 100%;
-  background: rgba(0, 0, 0, 0.4) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
   box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
@@ -76,20 +81,59 @@ a .company-logo-text {
   .company-logo-text {
     display: none;
   }
+  .nav-justified>li{
+    float: left;
+    width: 100% !important;
+    text-align: left;
+    display: list-item;
+  }
+  .nav-pills>li>a{
+    text-align: left;
+  }
+  .menu-mobile-item>img{
+    width: 100%;
+    height: auto; 
+  }
+  .menu-mobile-item h1{
+    font-size: 20px;
+  }
+  .menu-mobile-caption{
+    padding:1.5em;
+  }
+  .menu-mobile-button{
+    width: 100%;
+  }
+  .menu-mobile-item{
+    margin: 0.8em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
+  .menu-mobile-class{
+    display: none;
+  }
   .navbar-brand {
     float: left;
   }
   .masthead-nav {
     float: right;
   }
+
 }
-@media (max-width: 768px) {
-	  .navbar-toggle{
-  	background: #000 !important;
+@media (max-width: 400px) {
+	.navbar-toggle{
+  	background: rgba(0, 0, 0, 0.3) !important;
+  }
+  .icon-bar{
+    background: #fff !important;
+  }
+  #myCarousel{
+    display: none;
+  }
+  .wppb-form-field input{
+    width: 100% !important;
   }
 }
 /*
@@ -189,4 +233,8 @@ input#register.submit.button{
   left:20px !important;
   bottom:20px !important;
   
+}
+
+.post-grid .item .layer-media img {
+  border-radius: 100% !important;
 }
