@@ -14,13 +14,14 @@
 .page_item_wpglobus_menu_switch .children {
   display: none;
 }
-.page_item_wpglobus_menu_switch:hover .children {
+.page_item_wpglobus_menu_switch:hover .page_item_wpglobus_menu_switch:active .children {
   display: block;
 }
 .menu_item_wpglobus_menu_switch .sub-menu {
   display: none;
 }
-.menu_item_wpglobus_menu_switch:hover .sub-menu {
+
+.menu_item_wpglobus_menu_switch:hover .menu_item_wpglobus_menu_switch:active .sub-menu {
   display: block;
 }
 .widget_wpglobus .flags-styled .flag {

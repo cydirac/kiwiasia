@@ -1,4 +1,3 @@
-<!Document html>
 <html>
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
@@ -81,7 +80,7 @@
                     <h3><!-- title --></h3>
                     <p>
                         <h4 style="color:#fff;">
-                        <a href="http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video">
+                        <a href="#">
                             <?php bloginfo('description'); ?>
                         </a>
                         </h4>

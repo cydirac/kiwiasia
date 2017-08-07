@@ -1,23 +1,16 @@
 .team-container{
  background:rgba(255, 251, 249, 0.7);
 }
-@media (max-width: 400px) {
-  header{
-    height: 250px;  
-  }
-  .header{
-    background: rgba(0, 0, 0, 0.4) url(http://media.istockphoto.com/photos/freedom-in-nature-picture-id614034904) repeat;
-  }
+
+.fw-wizard-step-header{
+  display: none;
 }
 
-@media (min-width: 400px) {
-  header{
-    height: 400px;  
-  }
-  .header{
-    background: rgba(0, 0, 0, 0.4) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;
-  }
+.fw-step-part-title {
+  color: rgb(0,0,0);
 }
+
+
 header {
   width: 100%;
   background-repeat: no-repeat;
@@ -72,97 +65,153 @@ header {
   border-bottom-color: #fff;
 }
 
-a .company-logo-text {
-    font-family:Agenda-Light, "Agenda Light", Agenda, "Arial Narrow", sans-serif;
-    font-weight:900;
-}
 
-@media (max-width: 400px) {
+
+
+
+/* display css for mobile */
+@media (min-width:220px) { 
+  /* smartphones, iPhone, portrait 480x320 phones */ 
+  
+  
+  .carousel-caption{
+    display:block !important;
+  }
+  
   .company-logo-text {
     display: none;
   }
-  .nav-justified>li{
-    float: left;
-    width: 100% !important;
-    text-align: left;
-    display: list-item;
-  }
-  .nav-pills>li>a{
-    text-align: left;
-  }
-  .menu-mobile-item>img{
-    width: 100%;
-    height: auto; 
-  }
-  .menu-mobile-item h1{
-    font-size: 20px;
-  }
-  .menu-mobile-caption{
-    padding:1.5em;
-  }
-  .menu-mobile-button{
-    width: 100%;
-  }
-  .menu-mobile-item{
-    margin: 0.8em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-}
 
 
-@media (min-width: 400px) {
-  .menu-mobile-class{
-    display: none;
+  /* mobile menu end */
+  header{
+    height: 250px;  
   }
+  .header{
+    background: rgba(0, 0, 0, 0.4) url(http://media.istockphoto.com/photos/freedom-in-nature-picture-id614034904) repeat;
+  }
+  
   .navbar-brand {
     float: left;
   }
   .masthead-nav {
     float: right;
   }
+  div.aos-item__inner h2{
+    color:white;
+  }
+  div.aos-item__inner h4{
+    padding:1.2em;
+    font-size:1em;
+  }
+  div.fw-progress-wrap{
+    display:none;
+  }
+  div.fw-container{
+    width:100% !important;
+  }
+  .fw-wizard-step-container{
+    width: 95%;
+  }
+  div.fw-wizard-button-container{
+    width: 95%;
+  }
+  div.fw-wizard-buttons{
+    margin-top:0px !important;
+  }
+
+
+
+  div.carousel-caption{
+    width:100% !important;
+    padding:0.5em;
+    left:0 !important;
+    bottom:0 !important;
+    text-align: left;
+    line-height: 1;
+    background-color:rgba(251, 134, 25, 0.4);
+  }
+  div.carousel-caption.h1{
+    margin:1em !important;
+  }
+  button.navbar-toggle{
+    display:block !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+  }
+  .icon-bar{
+    background: #fff !important;
+  }
 
 }
-@media (max-width: 400px) {
-	.navbar-toggle{
+@media (max-width:641px){
+  .item{
+    display:block !important;
+  }
+  ul.nav.nav-pills.nav-justified{
+    display:none;
+  }
+  p{
+    display:none !important;
+  }
+  h1{
+    font-size:1em !important;
+  }
+}
+
+@media (min-width:641px) { 
+
+  .company-logo-text {
+    display: block !important;
+  }
+  a .company-logo-text {
+    font-family:Agenda-Light, "Agenda Light", Agenda, "Arial Narrow", sans-serif;
+    font-weight:900;
+  }
+  button.navbar-toggle{
+    display: none !important;
+  }
+  h1{
+    font-size:50px !important;
+    font-weight:bold;
+  }
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+  header{
+    height: 400px;  
+  }
+
+  .header{
+    background: rgba(0, 0, 0, 0.4) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;
+  }
+  
+  .navbar-toggle{
   	background: rgba(0, 0, 0, 0.3) !important;
   }
   .icon-bar{
     background: #fff !important;
   }
-  #myCarousel{
-    display: none;
-  }
+
   .wppb-form-field input{
     width: 100% !important;
   }
+  .fw-wizard-step-container{
+    width: 60%;
+  }
+  
+  div.carousel-caption{
+    padding:2em !important;
+    width:50% !important;
+    padding:0.5em;
+    left:30 !important;
+    bottom:30 !important;
+    text-align: left;
+    line-height: 2;
+    background-color:rgba(251, 134, 25, 0.4);
+  }
+
+  
 }
-/*
-.tabStrip{
-	background: #f3eee9;
-	border: none;
-	padding-left: 0;
-	padding-right: 0;
-}
-.grey{
-	background: grey;
-}
-.blue{
-	background: #00BFFF;
-}
-.orange{
-	background: #FF8C00;
-}
-.green{
-	background: #6B8E23;
-}
-.tabStrip ul li a{
-	color: #fff;
-}
-.tabStrip ul li a:hover{
-	border: none;
-	background: none;
-}
-*/
+
+
 /* side slide menu */
 .sidenav {
     height: 100%;
@@ -224,16 +273,7 @@ input#register.submit.button{
 .carousel slide{
   height:500px !important;
 }
-.carousel-caption{
-  padding:20px;
-  text-align: left;
-  line-height: 1.6;
-  width:50%;
-  background-color:rgba(251, 134, 25, 0.7);
-  left:20px !important;
-  bottom:20px !important;
-  
-}
+
 
 .post-grid .item .layer-media img {
   border-radius: 100% !important;

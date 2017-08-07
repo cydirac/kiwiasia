@@ -20,12 +20,14 @@ $(document).ready( function() {
 			$(this).parent().addClass('active');		
 	}).on('slid.bs.carousel', function(e) {
 		if(!clickEvent) {
-			var count = $('.nav').children().length -1;
-			var current = $('.nav li.active');
-			current.removeClass('active').next().addClass('active');
-			var id = parseInt(current.data('slide-to'));
-			if(count == id) {
-				$('.nav li').first().addClass('active');	
+			if(!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent) )) {
+				var count = $('.nav').children().length -1;
+				var current = $('.nav li.active');
+				current.removeClass('active').next().addClass('active');
+				var id = parseInt(current.data('slide-to'));
+				if(count == id) {
+					$('.nav li').first().addClass('active');	
+				}
 			}
 		}
 		clickEvent = false;

@@ -70,7 +70,9 @@
                 <div class="carousel-caption">    
                 <?php the_content(); ?>
                 <p>
+                    <!--
                     <a class="btn btn-info btn-sm">Read More</a>
+                    -->
                 </p>
                 </div>
             </div>
@@ -87,48 +89,28 @@
 
     </div>    
     
-    <!-- mobile menu -->
-    <div class="menu-mobile-class">
-        <?php $countX=0; ?>
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <?php if((get_the_category($post->ID)[0]->name)=='Carousel'): ?>
-            
-            <div class="menu-mobile-item">
-            
-            
-                <?php the_post_thumbnail_remove_class(the_post_thumbnail( 'full' ));  ?>
-                <div class="menu-mobile-caption">    
-                <?php the_content(); ?>
-                <p>
-                    <center>
-                    <a class="btn btn-info btn-md">Read More</a>
-                    </center>
-                </p>
-                </div>
-            </div>
-            
-            <?php endif; ?>
-
-        <?php endwhile; else : ?>
-    	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-        <?php endif; ?>
-  
-        <?php wp_reset_query(); ?>
-    </div>
     
     <!-- Section divider -->
     <div id="transcroller-body" class="aos-all" style="background:rgba(250, 135, 25, 0.8);padding-top:30px;padding-bottom:30px;">
         <div class="aos-item" data-aos="fade-up">
-            <div class="aos-item__inner" style="padding:40px;">
+            <div class="aos-item__inner">
                 <center>
-                    <h2 style="font-size:50px;font-weight:900;color:#fff;">
+                    <h2>
+                        <strong>
                         START NOW
+                        </strong>
                     </h2>
                     <h4>
                         Fill out the questionnaire and start to open the door to permanent residency in New Zealand.
                     </h4>
+                    
                 </center>
             </div>
+            <center>
+            <div class="questionnaire-form">
+            <?php echo do_shortcode('[multi-step-form id="1"]'); ?>
+            </div>
+            </center>
         </div>
     </div>
     
@@ -138,7 +120,12 @@
         easing: 'ease-in-out-sine'
       });
     </script>
-    
+
+    <!-- form -->
+    <div class="container">
+
+    </div>
+
     <!-- meet the team section -->
     <div class="team-container">
     <div class="container" style="padding-top:60px;">
@@ -198,13 +185,16 @@
     <!-- end of the team section -->
 
     <script>
+    
+    
     jQuery(document).ready(function($) {
         jQuery(document).ready(function(carousel) {
-            $('#myCarousel').carousel({
-        		interval:   4000
-        	});
+                $('#myCarousel').carousel({
+            		interval:   4000
+            	});
          });
     });
+
     	
     </script>
     
@@ -217,13 +207,6 @@
     <!-- contact form -->    
     <div class="container" >
     
-    <div class="row" style="background: rgba(00, 00, 00, .8);width:100%;padding:30px 30px 30px 30px;margin-top:30px;color:#ffffff;margin-bottom:50px;">
-        <center>
-        <h3 style="font-weight:900;">CONTACT US</h3>
-        </center>
-        
-        <?php echo do_shortcode('[wppb-register]'); ?>
-        
-    </div>
+
 
 <?php  get_footer(); ?>
