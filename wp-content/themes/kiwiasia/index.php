@@ -89,6 +89,18 @@
 
     </div>    
     
+    <!-- keywords menu -->
+
+    <div id="keywords-menu-section" class="collapse navbar-collapse" >
+        <?php 
+           $args =array(
+               'menu_class' => 'nav navbar-nav keyword-menu',
+               'menu' => 'Keyword Menu'
+               );
+          ?>
+        <?php wp_nav_menu($args); ?>
+    </div>
+
     
     <!-- Section divider -->
     <div id="transcroller-body" class="aos-all" style="background:rgba(250, 135, 25, 0.8);padding-top:30px;padding-bottom:30px;">

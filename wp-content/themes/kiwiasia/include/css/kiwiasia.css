@@ -73,12 +73,14 @@ header {
 @media (min-width:220px) { 
   /* smartphones, iPhone, portrait 480x320 phones */ 
   
-  
   .carousel-caption{
     display:block !important;
   }
   
   .company-logo-text {
+    margin: 0;
+    padding: .4em;
+    width: 100%;
     display: none;
   }
 
@@ -121,19 +123,16 @@ header {
   }
 
 
-
-  div.carousel-caption{
+ /* mobile */
+  div.carousel-post-caption{
     width:100% !important;
     padding:0.5em;
-    left:0 !important;
     bottom:0 !important;
-    text-align: left;
+    text-align: center;
     line-height: 1;
-    background-color:rgba(251, 134, 25, 0.4);
+    background-color:rgba(251, 134, 25, 0.8);
   }
-  div.carousel-caption.h1{
-    margin:1em !important;
-  }
+
   button.navbar-toggle{
     display:block !important;
     background: rgba(0, 0, 0, 0.3) !important;
@@ -141,9 +140,45 @@ header {
   .icon-bar{
     background: #fff !important;
   }
+  .ContentSection{
+     width:100% !important; 
+  }
 
 }
 @media (max-width:641px){
+  .carousel-caption{
+    bottom: 0;
+    left:0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color:rgba(250, 135, 25, 0.8)
+  }
+  .carousel-caption h1{
+    margin: .5em;
+    font-size: 1em;
+  }
+  /* tablet and mobile */
+  .content-section-scroll{
+    height: 220px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200% auto !important;
+  }
+  .content-section-scroll h1{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(255,255,255);
+    text-shadow: 2px 2px rgb(119,119,119);
+  }
+  
+  .ContentSection{
+     width:100% !important; 
+     height: 100%;
+  }
+  #sidebar-wrapper{
+    display: none;
+  }
   .item{
     display:block !important;
   }
@@ -153,27 +188,63 @@ header {
   p{
     display:none !important;
   }
-  h1{
-    font-size:1em !important;
-  }
 }
 
 @media (min-width:641px) { 
-
+  p{
+    text-align: left !important;
+    padding: 1em;
+    font-size: larger !important;
+    line-height: 2em !important;
+  }
+  header{
+    height: 50% !important;
+  }
+  .carousel-caption{
+    padding: 2em;
+    background-color:rgba(250, 135, 25, 0.8);
+  }
+  #menu-item-365{
+    border-top-style: solid;
+    border-top-width: .2em;
+    border-color: rgb(253,89,25);
+  }
+  #menu-item-364{
+    border-top-style: solid;
+    border-top-width: .2em;
+    border-color: rgb(29,148,196);
+  }
+  #menu-item-363{
+    border-top-style: solid;
+    border-top-width: .2em;
+    border-color: rgb(248,152,41);
+  }
+  #keywords-menu-section.navbar-collapse{
+    background-color: rgba(238, 238, 238, 0.83);
+    padding: 0;
+  }
+  #menu-keyword-menu.navbar-nav>li {
+    text-align: center;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 3em;
+    width: 33.333%;
+  }
+  #menu-keyword-menu.navbar-nav{
+    width: 100%;
+  }
+  .ContentSection {
+    float: right !important;
+    width:82% !important;
+  }
   .company-logo-text {
     display: block !important;
   }
-  a .company-logo-text {
-    font-family:Agenda-Light, "Agenda Light", Agenda, "Arial Narrow", sans-serif;
-    font-weight:900;
-  }
+
   button.navbar-toggle{
     display: none !important;
   }
-  h1{
-    font-size:50px !important;
-    font-weight:bold;
-  }
+
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
   header{
     height: 400px;  
@@ -197,18 +268,29 @@ header {
     width: 60%;
   }
   
-  div.carousel-caption{
+  div.carousel-post-caption{
+    top:10em;
+    right:-30em;
+    position:relative !important;
     padding:2em !important;
-    width:50% !important;
+    width:60% !important;
     padding:0.5em;
-    left:30 !important;
-    bottom:30 !important;
-    text-align: left;
     line-height: 2;
-    background-color:rgba(251, 134, 25, 0.4);
+    background-color:rgba(251, 134, 25, 0.7);
   }
-
-  
+  .content-section-scroll{
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  }
+  /* pc desktop */
+  .content-section-scroll h1{
+    font-size: 4em;
+    font-weight: bold;
+    color: rgb(255,255,255);
+    text-shadow: 2px 2px rgb(119,119,119);
+  }
 }
 
 
@@ -263,6 +345,8 @@ header {
     border-radius:0px;
 }
 
+
+
 input#register.submit.button{
   width:100%;
   background:#b1d234;
@@ -271,10 +355,97 @@ input#register.submit.button{
   padding:1em;
 }
 .carousel slide{
-  height:500px !important;
+  height:100% !important;
 }
 
 
 .post-grid .item .layer-media img {
   border-radius: 100% !important;
 }
+
+
+
+/*
+  Sidebar
+  Dirac Chen
+  20170808
+*/
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+ html{
+   height:100%;
+ }
+ header{
+   height:100%;
+ }
+ body {
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    width:18% !important;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.8)!important;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.sidebar-nav{
+  -webkit-padding-start:0px;
+}
+.sidebar-nav li a{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: larger;
+  font-weight: 900;
+}
+.sidebar-nav li h1{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: normal !important;
+  margin-top: .5em;
+  margin-left:2em;
+  margin-right:1.3em;
+  font-size: small;
+}
+.sidebar-nav li{
+  width: 100%;
+  background-color: rgb(150,150,150,.8)!important;
+  padding: 1em;
+  margin-top: 1px;
+  display: inline-block;
+  list-style-type: none;
+}
+.sidebar-nav p{
+  display: none;
+}
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+}
+
+
+/* Sidebar Styles */
